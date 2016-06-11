@@ -12,11 +12,9 @@
 </head>
 
 <body>
-First Name:${firstName}<br>
-Last Name: ${lastName}<br>
-Email:     ${Email}<br>
-Date:  ${currentDate}<br>
-Rating: ${rating}<br>
-Age:    ${age}<br>
+First Name:${recentlySavedUser.fname}<br>
+Last Name: ${recentlySavedUser.lname}<br>
+Email:     ${recentlySavedUser.eml}<br>
+Age:    ${recentlySavedUser.age}<br>
 </body>
 </html>

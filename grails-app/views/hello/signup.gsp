@@ -9,7 +9,7 @@
     <input type=text name="firstName" placeholder="Enter FirstName"><br><br>
     <input type=text  name="lastName" placeholder="Enter LastName"><br><br>
     <input type=text  name="Email" placeholder="Enter Email-id"><br><br>
-    <input type=password   name="pwd" placeholder="Enter Password"><br><br>
+    <input type=number   name="age" placeholder="Enter Age"><br><br>
     <input type=submit value="submit">
 </form>
 <%--First Name:${firstName}<br>

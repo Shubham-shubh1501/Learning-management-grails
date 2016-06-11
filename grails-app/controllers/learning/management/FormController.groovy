@@ -5,13 +5,10 @@ class FormController {
     def saveUser() {
         println"saveUser action executed"
         println"Parameters received"
-        println params.firstName
-        println params.lastName
-        println params.Email
-        println params.pwd
-        return [firstName: params.firstName, lastName: params.lastName, Email: params.Email, currentDate: new Date(),rating:23,age
-        : 100]
-
+        Map p=[fname: params.firstName,lname: params.lastName,eml: params.Email ,age: params.age]
+        User myUser=new User(p);
+        myUser.myTask();
+        return [recentlySavedUser: myUser]
     }
 
 }
