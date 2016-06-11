@@ -2,14 +2,16 @@ package learning.management
 
 class FormController {
 
-    def index() {
-
-        println(params)
-        println"Thank you for signup"
-        redirect(controller: "form",action: "Thankyou", params:[name: "you"])
+    def saveUser() {
+        println"saveUser action executed"
+        println"Parameters received"
+        println params.firstName
+        println params.lastName
+        println params.Email
+        println params.pwd
+        return [firstName: params.firstName, lastName: params.lastName, Email: params.Email, currentDate: new Date(),rating:23,age
+        : 100]
 
     }
-    def Thankyou() {
-     render ("Thank You for ur signup")
-    }
+
 }
