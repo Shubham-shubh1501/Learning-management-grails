@@ -10,5 +10,5 @@ class SaveContent {
     String myLastName
     String myEmail
     String myAge
-    String count
+    int count
 }
