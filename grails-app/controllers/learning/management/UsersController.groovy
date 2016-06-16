@@ -5,14 +5,12 @@ class UsersController {
     def create() {
 
     }
-    def x;
+
     def save() {
         println(params);
-
-        x=x ?(++x):1
-        println("x = ${x}");
-
-        Map p=[myFirstName:params.firstName,myLastName: params.lastName,myEmail: params.Email ,myAge: params.age,count: x]
+        session.count=session.count?:0
+        session.count=session.count+1
+        Map p=[myFirstName:params.firstName,myLastName: params.lastName,myEmail: params.Email ,myAge: params.age,count: session.count]
         SaveContent sa=new SaveContent(p);
         session.currentUser=sa
         session.Users = session.Users ?: []
