@@ -23,9 +23,7 @@
 
 </head>
 <body>
-<content tag="pagename">
-    create
-</content>
+
 <content tag="title">
     <h1>Registration Form</h1>
 </content>

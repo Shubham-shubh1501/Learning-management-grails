@@ -25,9 +25,7 @@
 </head>
 
 <body>
-<content tag="pagename">
-    list
-</content>
+
 <content tag="title">
     <h1>User List</h1>
 </content>

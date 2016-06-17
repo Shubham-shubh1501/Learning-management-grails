@@ -7,21 +7,18 @@ class UsersController {
     }
 
     def save() {
-        println(params);
-        session.count=session.count?:0
-        session.count=session.count+1
         Map p=[firstName:params.firstName,lastName: params.lastName,email: params.Email ,age: params.age]
-        Person sa=new Person(p);
-        session.currentUser=sa
-        session.Users = session.Users ?: []
+        Person sa=new Person(p)
         sa.save()
-        session.Users.add(sa)
-        redirect(action:"view")
+
+        //redirect(action: "view", id: sa.id, params: [date: 17])
+        redirect(action: "view", params: [id: sa.id, date: 17])
     }
     def view() {
-        return[currentUsersDetails: session.currentUser]
+        Person myUser = Person.get(params.id)
+        return[currentUsersDetails: myUser]
     }
     def list() {
-        return [users: session.Users]
+        return [users: Person.list()]
     }
 }

@@ -13,9 +13,7 @@
 </head>
 
 <body>
-<content tag="pagename">
-    view
-</content>
+
 <content tag="title">
     <h1>View Details</h1>
 </content>
