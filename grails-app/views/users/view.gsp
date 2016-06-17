@@ -13,12 +13,19 @@
 </head>
 
 <body>
-
-<dl class="dl-horizontal">
-    <dt>First Name:</dt><dd>${currentUsersDetails.myFirstName}</dd>
-    <dt>Last Name:</dt><dd>${currentUsersDetails.myLastName}</dd>
-    <dt>Email</dt><dd>${currentUsersDetails.myEmail}</dd>
-    <dt>Age:</dt><dd>${currentUsersDetails.myAge}</dd>
-</dl>
+<content tag="pagename">
+    view
+</content>
+<content tag="title">
+    <h1>View Details</h1>
+</content>
+<content tag="body">
+    <dl class="dl-horizontal">
+        <dt>First Name:</dt><dd>${currentUsersDetails.firstName}</dd>
+        <dt>Last Name:</dt><dd>${currentUsersDetails.lastName}</dd>
+        <dt>Email</dt><dd>${currentUsersDetails.email}</dd>
+        <dt>Age:</dt><dd>${currentUsersDetails.age}</dd>
+    </dl>
+</content>
 </body>
 </html>

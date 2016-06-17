@@ -25,30 +25,35 @@
 </head>
 
 <body>
+<content tag="pagename">
+    list
+</content>
+<content tag="title">
+    <h1>User List</h1>
+</content>
+<content tag="body">
+    <div>
+        <table  class="table table-bordered">
+            <tr>
 
-<div class="container">
-    <h1>Users List</h1>
-    <hr>
-    <table  class="table table-bordered">
-        <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Age</th>
-        </tr>
-        <g:each in="${users}" var="user">
-            <tr  <g:if test="${(user.myAge).toInteger()>100}">
-                class = "danger";
-            </g:if>>
-                <td>${user.count}</td>
-                <td>${user.myFirstName}</td>
-                <td>${user.myLastName}</td>
-                <td>${user.myEmail}</td>
-                <td>${user.myAge}</td>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Age</th>
             </tr>
-        </g:each>
-    </table>
-</div>
+            <g:each in="${users}" var="user">
+                <tr  <g:if test="${(user.age).toInteger()>100}">
+                    class = "danger";
+                </g:if>>
+
+                    <td>${user.firstName}</td>
+                    <td>${user.lastName}</td>
+                    <td>${user.email}</td>
+                    <td>${user.age}</td>
+                </tr>
+            </g:each>
+        </table>
+    </div>
+</content>
 </body>
 </html>

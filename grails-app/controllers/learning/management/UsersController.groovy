@@ -10,11 +10,11 @@ class UsersController {
         println(params);
         session.count=session.count?:0
         session.count=session.count+1
-        Map p=[myFirstName:params.firstName,myLastName: params.lastName,myEmail: params.Email ,myAge: params.age,count: session.count]
-        SaveContent sa=new SaveContent(p);
+        Map p=[firstName:params.firstName,lastName: params.lastName,email: params.Email ,age: params.age]
+        Person sa=new Person(p);
         session.currentUser=sa
         session.Users = session.Users ?: []
-
+        sa.save()
         session.Users.add(sa)
         redirect(action:"view")
     }

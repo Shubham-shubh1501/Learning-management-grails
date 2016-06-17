@@ -14,42 +14,47 @@
     .form-group {
         margin-bottom: 0px;
     }
-    .bg-success {
-        background-color: #95fff5;
-    }
+
     .btn-inverse{
         color: #ffffff;
         background-color: #222222;
     }
     </style>
+
 </head>
 <body>
-
-<div class="container">
+<content tag="pagename">
+    create
+</content>
+<content tag="title">
     <h1>Registration Form</h1>
-    <hr>
-    <g:form controller="users" action="save" class="bg-success table-bordered">
-    <div class="form-group">
-        <label for="firstName"> First Name:</label>
-        <g:textField name="firstName" placeholder="Enter FirstName" class="form-control"/><br>
-    </div>
-    <div class="form-group">
-        <label for="lastName"> Last Name:</label>
-        <g:textField  name="lastName" placeholder="Enter LastName" class="form-control"/><br>
-    </div>
-    <div class="form-group">
-        <label for="Email"> Email:</label>
-        <g:textField  name="Email" placeholder="Enter Email-id" class="form-control"/><br>
-    </div>
-    <div class="form-group">
-        <label for="age">Age:</label>
-        <g:textField   name="age" placeholder="Enter Age" class="form-control"/><br>
-    </div>
+</content>
+<content tag="body">
     <div>
-        <g:submitButton name="Submit" class="btn btn-inverse btn-block"/>
+                <g:form controller="users" action="save" class="table-bordered">
+            <div class="form-group">
+                <label for="firstName"> First Name:</label>
+                <g:textField name="firstName" placeholder="Enter FirstName" class="form-control"/><br>
+            </div>
+            <div class="form-group">
+                <label for="lastName"> Last Name:</label>
+                <g:textField  name="lastName" placeholder="Enter LastName" class="form-control"/><br>
+            </div>
+            <div class="form-group">
+                <label for="Email"> Email:</label>
+                <g:textField  name="Email" placeholder="Enter Email-id" class="form-control"/><br>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <g:textField   name="age" placeholder="Enter Age" class="form-control"/><br>
+            </div>
+            <div>
+                <g:submitButton name="Submit" class="btn btn-inverse btn-block"/>
+            </div>
+        </g:form>
     </div>
-    </g:form>
-</div>
+
+</content>
 </body>
 </html>
 
