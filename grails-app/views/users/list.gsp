@@ -33,7 +33,7 @@
     <div>
         <table  class="table table-bordered">
             <tr>
-
+                <th>#</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
@@ -43,11 +43,15 @@
                 <tr  <g:if test="${(user.age).toInteger()>100}">
                     class = "danger";
                 </g:if>>
-
+                    <td><a href="/users/view/${user.id}">${user.id}</a></td>
                     <td>${user.firstName}</td>
                     <td>${user.lastName}</td>
                     <td>${user.email}</td>
                     <td>${user.age}</td>
+                    <td><a href="/users/edit/${user.id}">EDIT</a>
+                        <a href="/users/delete/${user.id}">Delete</a>
+                    </td>
+
                 </tr>
             </g:each>
         </table>

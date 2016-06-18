@@ -45,7 +45,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li class="${actionName.equals("create")?'active':''}"><a href="/users/%20create/">Create</a></li>
-                <li class="${actionName.equals("view")?'active':''}"><a href="/users/%20view/">View</a></li>
+
                 <li class="${actionName.equals("list")?'active':''}"><a href="/users/%20list/">List</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
