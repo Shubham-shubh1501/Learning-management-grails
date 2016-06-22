@@ -30,21 +30,30 @@
 <content tag="body">
     <div>
                 <g:form controller="users" action="save" class="table-bordered">
-            <div class="form-group">
+            <div class="form-group ${hasErrors(bean: MyUser,field:'firstName','has-error')}">
                 <label for="firstName"> First Name:</label>
-                <g:textField name="firstName" placeholder="Enter FirstName" class="form-control"/><br>
+                <g:textField name="firstName" placeholder="Enter FirstName" class="form-control"
+                             value="${MyUser.firstName}"/><br>
+                <g:renderErrors bean="${MyUser}" field="firstName"/>
             </div>
-            <div class="form-group">
+            <div class="form-group ${hasErrors(bean: MyUser,field:'lastName','has-error')}">
                 <label for="lastName"> Last Name:</label>
-                <g:textField  name="lastName" placeholder="Enter LastName" class="form-control"/><br>
+                <g:textField  name="lastName" placeholder="Enter LastName" class="form-control"
+                              value="${MyUser.lastName}"/><br>
+                <g:renderErrors bean="${MyUser}" field="lastName"/>
             </div>
-            <div class="form-group">
+            <div class="form-group ${hasErrors(bean: MyUser,field:'email','has-error')}">
+
                 <label for="Email"> Email:</label>
-                <g:textField  name="Email" placeholder="Enter Email-id" class="form-control"/><br>
+                <g:textField  name="Email" placeholder="Enter Email-id" class="form-control"
+                              value="${MyUser.email}"/><br>
+                <g:renderErrors bean="${MyUser}" field="email"/>
             </div>
-            <div class="form-group">
+            <div class="form-group ${hasErrors(bean: MyUser,field:'age','has-error')}">
                 <label for="age">Age:</label>
-                <g:textField   name="age" placeholder="Enter Age" class="form-control"/><br>
+                <g:textField   name="age" placeholder="Enter Age" class="form-control"
+                               value="${MyUser.age}"/><br>
+                <g:renderErrors bean="${MyUser}" field="age"/>
             </div>
             <div>
                 <g:submitButton name="Submit" class="btn btn-inverse btn-block"/>

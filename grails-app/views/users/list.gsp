@@ -11,12 +11,12 @@
     <title></title>
     <meta name="layout" content="navbarlayout">
    <style>
-        table {
-            border-collapse: collapse;
-        }
-        th {
-            text-align: left;
-        }
+   table {
+       border-collapse: collapse;
+   }
+   th {
+       text-align: left;
+   }
         tr{
 
         }
