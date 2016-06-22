@@ -10,3 +10,6 @@ target/
 wrapper/
 out/
 test/
+grails-app/assets/javascripts/bootstrap.min.js
+grails-app/assets/javascripts/jquery.min.js
+grails-app/assets/stylesheets/bootstrap.min.css
